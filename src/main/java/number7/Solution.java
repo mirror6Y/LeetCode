@@ -1,6 +1,5 @@
 package number7;
 
-import lombok.NoArgsConstructor;
 
 public class Solution {
 
