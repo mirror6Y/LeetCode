@@ -1,6 +1,5 @@
 package number20;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 import lombok.NoArgsConstructor;
 
 /**
@@ -72,18 +71,20 @@ public class Solution {
         Solution solution = new Solution(150);
         boolean result = false;
         String brackets;
+        //空字符串有效
         if (s.equals("")) {
             result = true;
         } else {
+            //遍历字符串
             for (int i = 0; i < s.length(); i++) {
                 brackets = String.valueOf(s.charAt(i));
-                //入栈
+                //左括号入栈
                 if (brackets.equals("(") || brackets.equals("[") || brackets.equals("{")) {
                     solution.push(brackets);
                 } else {
                     //右括号  出栈比较
                     String peek = solution.pop();
-                    //栈空说明没有左括号,返回false
+                    //栈空说明没有左括号,右括号开头，返回false
                     if (peek == null) {
                         result = false;
                         break;
