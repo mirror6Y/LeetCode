@@ -52,7 +52,7 @@ public class ProductOfNumbers {
         numbers.add(2);
         numbers.add(5);
         numbers.add(3);
-        System.out.println(Arrays.toString(numbers.getArray()));
+//        System.out.println(Arrays.toString(numbers.getArray()));
         System.out.println(numbers.getProduct(2));
         System.out.println(numbers.getProduct(3));
         System.out.println(numbers.getProduct(4));

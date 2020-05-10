@@ -16,10 +16,21 @@ import java.util.stream.Collectors;
 public class Solution {
 
     public int removeDuplicates(int[] nums) {
-        List<Integer> list = Arrays.stream(nums).boxed().collect(Collectors.toList());
-        Set<Integer> set = new TreeSet<>(list);
-        System.out.println(set);
-        return set.size();
+        int i = 0;
+        int j = 1;
+        if (nums.length < 1) {
+            return nums.length;
+        } else {
+            while (j < nums.length - 1) {
+                if (nums[i] == nums[j]) {
+                    j++;
+                } else {
+                    nums[i + 1] = nums[j];
+                    i++;
+                }
+            }
+        }
+        return i;
     }
 
     public static void main(String[] args) {
