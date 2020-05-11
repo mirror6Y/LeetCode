@@ -19,15 +19,6 @@ public class Solution {
                 i++;
             }
         }
-
-        for (; i < j; ) {
-            if (nums[i] == val) {
-                nums[i] = nums[j];
-                j--;
-            } else {
-                i++;
-            }
-        }
         return j + 1;
     }
 }
