@@ -15,7 +15,7 @@ public class ReciprocalK {
             val = x;
         }
     }
-    
+
     public ListNode getKthFromEnd(ListNode head, int k) {
         if (head != null) {
             ListNode l = head;
