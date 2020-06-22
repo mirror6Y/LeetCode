@@ -23,7 +23,6 @@ public class Code34 {
     public static int[] searchRange(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;
-        int[] a = {-1, -1};
         while (low <= high) {
             int mid = low + ((high - low) >> 1);
             if (nums[mid] < target) {
@@ -31,24 +30,25 @@ public class Code34 {
             } else if (nums[mid] > target) {
                 high = mid - 1;
             } else {
+                int[] a = {mid, mid};
                 int tmp = mid - 1;
                 while (tmp >= 0 && nums[tmp] == target) {
+                    a[0] = tmp;
                     tmp--;
                 }
-                a[0] = tmp + 1;
                 tmp = mid + 1;
-                while (tmp <= a.length - 1 && nums[tmp] == target) {
+                while (tmp <= nums.length - 1 && nums[tmp] == target) {
+                    a[1] = tmp;
                     tmp++;
                 }
-                a[1] = tmp - 1;
                 return a;
             }
         }
-        return a;
+        return new int[]{-1, -1};
     }
 
     public static void main(String[] args) {
-        int[] a = {8, 8, 8};
+        int[] a = {1, 8};
         System.out.println(Arrays.toString(Code34.searchRange(a, 8)));
     }
 }
