@@ -8,9 +8,11 @@
 链接：https://leetcode-cn.com/problems/guess-number-higher-or-lower
 著作权归领扣网络所有。
  
-`-1 : 我的数字比较小
+-1 : 我的数字比较小
+
   1 : 我的数字比较大
-  0 : 恭喜！你猜对了！`
+  
+  0 : 恭喜！你猜对了！
 
 ### 栗子1：
 
