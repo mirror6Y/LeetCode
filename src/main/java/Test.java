@@ -46,6 +46,24 @@ public class Test {
         return result;
     }
 
+    private int binarySearch(int[] a, int target) {
+        int low = 0;
+        int high = a.length;
+
+        while (low < high) {
+            int mid = low + ((high - low) >> 1);
+            if (target > a[mid]) {
+                low = mid + 1;
+            } else if (target < a[mid]) {
+                high = mid;
+            } else {
+                return mid;
+            }
+        }
+
+        return -1;
+    }
+
 
     public static void main(String[] args) {
         Test test = new Test();
@@ -57,7 +75,8 @@ public class Test {
         System.out.println(test.countNegatives(grid1));
         System.out.println(test.countNegatives(grid2));
         System.out.println(test.countNegatives(grid3));
-        int[] a = {1, 3};
+        int[] a = {1, 2, 3, 4, 5};
         test.searchInsert(a, 2);
+        test.binarySearch(a, 0);
     }
 }
