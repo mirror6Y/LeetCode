@@ -23,6 +23,30 @@ public class Test {
         return count;
     }
 
+
+    public int searchInsert(int[] nums, int target) {
+        if (0 == target) {
+            return 0;
+        }
+        int low = 0;
+        int high = nums.length - 1;
+        int result = -1;
+        while (low <= high) {
+            int mid = low + ((high - low) >> 1);
+            if (nums[mid] == target) {
+                return mid;
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+                result = low;
+            } else {
+                high = mid - 1;
+                result = mid;
+            }
+        }
+        return result;
+    }
+
+
     public static void main(String[] args) {
         Test test = new Test();
         int[][] grid = {{4, 3, 2, -110}, {3, 2, 1, -110}, {1, 1, -1, -200}, {-1, -1, -2, -3}};
@@ -33,5 +57,7 @@ public class Test {
         System.out.println(test.countNegatives(grid1));
         System.out.println(test.countNegatives(grid2));
         System.out.println(test.countNegatives(grid3));
+        int[] a = {1, 3};
+        test.searchInsert(a, 2);
     }
 }
