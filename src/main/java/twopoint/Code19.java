@@ -43,11 +43,10 @@ public class Code19 {
         dummy.next = head;
         ListNode first = dummy;
         ListNode second = dummy;
-        // Advances first pointer so that the gap between first and second is n nodes apart
+        // 两个指针之间相隔n个结点
         for (int i = 1; i <= n + 1; i++) {
             first = first.next;
         }
-        // Move first to the end, maintaining the gap
         while (first != null) {
             first = first.next;
             second = second.next;
