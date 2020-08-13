@@ -1,4 +1,4 @@
-package recursion;
+package math;
 
 import twopoint.ListNode;
 
