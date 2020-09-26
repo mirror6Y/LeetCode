@@ -1,4 +1,4 @@
-package twopoint.number350;
+package twopoint;
 
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -9,7 +9,7 @@ import java.util.List;
  * @description 先排序，再用双指针
  * @createTime 2020/6/2 16:52
  */
-public class SolutionPlus {
+public class Code350 {
 
     public int[] intersect(int[] nums1, int[] nums2) {
 
